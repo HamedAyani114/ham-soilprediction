@@ -1,0 +1,102 @@
+body{
+    background-image:url('bg2.jpeg');
+    /* font-family: verdana; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: loadtransition 2s;
+}
+h1{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: black;
+    font-weight: 750;
+}
+.contact-form{
+    background: rgba(215, 215, 215, 0.808);
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 90%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 5%;
+    margin-top: -10%;
+    font-weight: 500;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+div.project{
+    box-shadow: 0px 7px 60px -10px black;
+    width: auto ;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px soid rgba(255,255,255,0.3);
+    box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+    color: rgb(0, 0, 0);
+    width: 410px;
+    margin: 100px auto 0px auto;
+}
+p{
+    font-size: 18px;
+    font-weight: 450;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+div.content{
+    box-shadow: 0px 7px 60px -10px black;
+    width: auto ;
+    /* font-size: 18px; */
+    /* font-weight: 500; */
+    border-radius: 10px;
+    border: 1px soid rgba(255,255,255,0.3);
+    box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+    color: rgb(0, 0, 0);
+    width: 90%;
+    margin: 100px auto 0px auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
