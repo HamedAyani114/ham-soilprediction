@@ -17,7 +17,10 @@
          </div>
          <form  method="post" action="/" enctype = "multipart/form-data">
             <h1>Klasfikasi Kecocokan Tanah untuk Tanaman</h1>
-            <h2>Model Algoritma Gaussian Naive Bayes dengan tingkat akurasi 100%</h2>
+            <h2>Model Algoritma Gaussian Naive Bayes dengan tingkat akurasi <b>{{ acc }} %</b></h2>
+            <br>
+            <h4>Source</h4>
+            <a class="logo" style="font-size: 19px;" href="https://github.com/HamedAyani114/ham-soilprediction" target="_blank" title="Go to Github HamedAyani114"><img src="{{ url_for('static', filename='styles/Github.png') }}" alt="Github"/>@HamedAyani114</a>
             <div class="row">
                <div class="col-md-6 project">
                   <h3>
@@ -72,7 +75,7 @@
                         </h7>
                         
                         <h5 style="text-align: center;">
-                           Cocok diguunakan untuk tanaman
+                           Cocok digunakan untuk tanaman
                         </h5> 
                         <h4 style="text-align: center;">
                            <b><u>{{ result }}</u></b> 

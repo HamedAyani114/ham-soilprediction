@@ -8,6 +8,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    acc_path = os.path.join('models', 'accGNB')
+    acc = pickle.load(open(acc_path, 'rb'))
     if request.method == "POST":
         # request all the input fields N	P	K	temperature	humidity	ph	rainfall
         N = request.form['N']
@@ -19,14 +21,23 @@ def home():
         rainfall = float(request.form['rainfall'])
 
         val = np.array([N, P, K, temperature, humidity, ph, rainfall])
+        datain = [np.array(val)]
 
-        final_features = [np.array(val)]
-        model_path = os.path.join('models', 'modelsoilgnb.sav')
+        scalar_path = os.path.join('models', 'scalerData')
+        scalar = pickle.load(open(scalar_path, 'rb'))
+
+
+        model_path = os.path.join('models', 'modelsoilgnb_norm.sav')
         model = pickle.load(open(model_path, 'rb'))
+
+        acc_path = os.path.join('models', 'accGNB')
+        acc = pickle.load(open(acc_path, 'rb'))
+
+        final_features = scalar.transform(datain)
         res = model.predict(final_features)
 
-        return render_template('index.html', result=res)
-    return render_template('index.html')
+        return render_template('index.html', result=res[0], acc=acc)
+    return render_template('index.html', acc=acc)
 
 
 
